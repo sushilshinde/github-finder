@@ -1,24 +1,17 @@
 import React, { Component } from "react";
 
-export class UserItem extends Component {
-  constructor() {
-    super();
-   
-  }
-
-  render() {
-    return (
+const UserItem = (props) =>{
+      return (
       <div className="card text-center">
         <img
-          src={this.props.avatarUrl}
+          src={props.avatarUrl}
           className="round-img"
           style={{ width: "60px" }}
         />
-        <h3>{this.props.login}</h3>
-        <div><a href={this.props.htmlUrl}>More</a></div>
+        <h3>{props.login}</h3>
+        <div><a href={props.htmlUrl}>More</a></div>
       </div>
     );
-  }
 }
 
 export default UserItem;
